@@ -81,3 +81,4 @@ group :test do
 end
 
 gem 'devise'
+gem "factory_bot_rails"

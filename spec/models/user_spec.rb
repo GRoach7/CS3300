@@ -1,5 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+class SomeIntegrationTest < ActionDispatch::IntegrationTest
+    include Devise::Test::IntegrationHelpers
+  
+    def setup
+      sign_in FactoryBot.create(:user)
+    end
+  end
