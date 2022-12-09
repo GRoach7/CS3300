@@ -20,6 +20,7 @@
       </div>
     <% end %>
   </div>
-
-  <%= link_to "New project", new_project_path %>
+  <% if current_user %>
+    <%= link_to "New project", new_project_path %>
+  <% end %>
 </div>
